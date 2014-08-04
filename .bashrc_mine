@@ -9,3 +9,9 @@ alias ..='cd ..'
 alias sst=`svn st --show-updates`
 alias sdi=`svn di -r HEAD`
 alias scl=`svn clean`
+
+# Vimがインストールされている環境のみの時はviを置きかえる。
+if [ -f /usr/bin/vim ]; then
+  alias vi='vim'
+  alias view='vim -M'
+fi
